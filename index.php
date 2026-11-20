@@ -1,12 +1,17 @@
 <?php
 
 //panggil file PropertyConstant
-require('./PropertyConstan.php');
+require('./PropertyConstat.php');
 
 use Pbo\Marketplace\produk;
 
 //object
-$produk = new Produk('P0001','Laptop',10000000,5);
+$produk = new Produk();
+
+$produk ->setKode('P0001')
+        ->setNama('Laptop')
+        ->setHarga(10000000)
+        ->setStok(5);
 
 
 //$produk = new produk();
@@ -18,13 +23,13 @@ $produk = new Produk('P0001','Laptop',10000000,5);
 
 
 //hasil
-echo "Produk: ".$produk->nama;
+echo "Produk: ".$produk->getNama();
 echo "<br/>";
 
-echo "kode: ".$produk->kode;
+echo "kode: ".$produk->getHarga();
 echo "<br/>";
 
-echo "harga: ".$produk->harga;
+echo "harga: ".$produk->getStok();
 echo "<br/>";
 
 echo "stok: ".$produk->stok;
